@@ -11,25 +11,51 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">Divyanshu</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="theme-toggle">🌙</button>
+  <!-- Vanta.js FOG Background -->
+<div id="vanta-bg" style="width: 100vw; height: 100vh; position: fixed; z-index: -1;"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+  VANTA.FOG({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    highlightColor: 0xff0055,
+    midtoneColor: 0x5500aa,
+    lowlightColor: 0x110044,
+    baseColor: 0x0a0a0a,
+    blurFactor: 0.7,
+    speed: 1.2,
+    zoom: 1.2
+  });
+</script>
+
+  
+
+<header class="navbar">
+  <nav>
+    <div class="nav-container">
+      <h1 class="logo">Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙</button></li>
+      </ul>
     </div>
-  </header>
-  <header class="hero">
-    <div class="overlay"></div>
+  </nav>
+</header>
+ 
+ 
+<header class="hero" id="home">
+  <div class="overlay"></div>
+  <div class="container">
     <div class="content">
       <h1 class="typewriter">Hi, I'm Divyanshu Bhardwaj</h1>
       <p>AI/ML Specialist | NLP Developer | Data Scientist</p>
@@ -38,47 +64,62 @@
         <a href="#contact" class="btn secondary">Get in Touch</a>
       </div>
     </div>
-  </header>
-  <section >
+  </div>
+</header>
+
+
+<section>
+  <div class="container">
     <div class="hero-text">
       <h1 id="typewriter"></h1>
-      <p data-aos="fade-left">Data Science and AI/ML Specialist with a robust analytical approach, proven experience in developing machine learning models, and integrating IoT solutions. Actively 
-        participated in international conferences, hackathons, and published research papers .Holds multiple certifications in AI, ML, and Data Science .Committed to continuous 
-        learning and applying data-driven decisions in IT environments. </p>
+      <p data-aos="fade-left">
+        Data Science and AI/ML Specialist with a robust analytical approach, proven experience in developing machine learning models, and integrating IoT solutions. Actively 
+        participated in international conferences, hackathons, and published research papers. Holds multiple certifications in AI, ML, and Data Science. Committed to continuous 
+        learning and applying data-driven decisions in IT environments.
+      </p>
     </div>
-  </section> 
-  
-  <section id="about" class="section" data-aos="fade-left">
+  </div>
+</section>
+
+
+<section id="about" class="section" data-aos="fade-left">
+  <div class="container">
     <h2>About Me</h2>
-    <p></p>
-  </section>
+    <p>I’m a computer science postgraduate with a strong foundation in AI, machine learning, and natural language processing, complemented by real-world experience through applied projects and internships. Beyond technical proficiency, I bring a collaborative spirit, clear communication, and leadership skills honed in dynamic team environments.
+
+Qualifying the UGC-NET twice stands as a testament to my academic rigor and deep grasp of core computer science concepts. I’m driven by curiosity, thrive in interdisciplinary spaces, and excel at translating complex theories into practical, scalable solutions. My goal is to build technology that not only solves problems but adds meaning to human interaction with data and systems.</p>
+  </div>
+</section>
 
 
-  <section id="skills">
-  <h2>Skills</h2>
-  <div class="skills" >
-    <span class="tag python" data-skill="Python"></span>
-    <span class="tag ml" data-skill="Machine Learning"></span>
-    <span class="tag nlp" data-skill="Natural Language Processing"></span>
-    <span class="tag tensorflow" data-skill="TensorFlow"></span>
-    <span class="tag DeepLearning" data-skill="DeepLearning"></span>
-    <span class="tag sklearn" data-skill="Scikit-learn"></span>
-    <span class="tag Html" data-skill="HTML"></span>
-    <span class="tag css" data-skill="CSS"></span>
-    <span class="tag javascript" data-skill="JavaScript"></span>
-    <span class="tag Github" data-skill="GitHub"></span>
-    <span class="tag Dbms" data-skill="DBMS"></span>
-    <span class="tag powerbi" data-skill="Power BI"></span>
+<section id="skills" class="section" data-aos="fade-up">
+  <div class="container skills-box"> <!-- ✨ Added class here -->
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="tag python" data-skill="Python"></span>
+      <span class="tag ml" data-skill="Machine Learning"></span>
+      <span class="tag nlp" data-skill="Natural Language Processing"></span>
+      <span class="tag tensorflow" data-skill="TensorFlow"></span>
+      <span class="tag DeepLearning" data-skill="DeepLearning"></span>
+      <span class="tag sklearn" data-skill="Scikit-learn"></span>
+      <span class="tag Html" data-skill="HTML"></span>
+      <span class="tag css" data-skill="CSS"></span>
+      <span class="tag javascript" data-skill="JavaScript"></span>
+      <span class="tag Github" data-skill="GitHub"></span>
+      <span class="tag Dbms" data-skill="DBMS"></span>
+      <span class="tag powerbi" data-skill="Power BI"></span>
+    </div>
   </div>
 </section>
 
 
 
-  <section id="projects" class="section">
+<section id="projects" class="section">
+  <div class="container">
     <h2 class="neon-title">Projects</h2>
     <div class="project-grid">
       <div class="project-card_1">
-        <h3>🧠 Mental Health Detection </h3>
+        <h3>🧠 Mental Health Detection</h3>
         <p>Real-time ML model for mental health prediction using mixed-method data.</p>
       </div>
       <div class="project-card_2">
@@ -90,40 +131,160 @@
         <p>Hybrid ML system with 99% accuracy for crop recommendation & yield.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience" class="section" data-aos="fade-right">
+
+<section id="experience" class="section" data-aos="fade-right" data-aos-duration="2000">
+  <div class="container experience-box"> <!-- ✨ Box class added here -->
     <h2>Experience</h2>
     <div class="timeline">
       <div class="timeline-item">
         <h4>Machine Learning Intern – ABVV</h4>
-        <p>May–July 2024</p>
-        <p>Developed and deployed a mental health prediction model.</p>
+        <p><em>May – July 2024</em></p>
+        <p>
+          Built and deployed a predictive model for mental health analysis using Scikit-learn and Pandas.
+          Conducted data preprocessing, feature engineering, and model evaluation to ensure accuracy.
+          Integrated the model into a real-time dashboard for predicting mental health.
+        </p>
       </div>
       <div class="timeline-item">
         <h4>NLP Intern – ABVV</h4>
-        <p>Feb–Apr 2024</p>
-        <p>Created a speech-based NLP translator using LSTM and Google APIs.</p>
+        <p><em>Feb – Apr 2024</em></p>
+        <p>
+          Designed and implemented a speech-based NLP translation system using LSTM-based neural networks and Google Cloud Speech APIs.
+          Preprocessed multilingual datasets, handled audio-to-text conversion, and applied sequence-to-sequence models for translation.
+          Optimized the pipeline for latency and scalability, achieving < 1s response time.
+          Documented the entire system and assisted in deploying it within an interactive web application.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="education" class="section" data-aos="fade-left">
-    <h2>Education</h2>
-    <p><strong>MCA</strong> – Atal Bihari Vajpayee Vishwavidyalaya (2022–2024) – 80%</p>
-  </section>
+  
 
-  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:divyanshubhardwajwork@gmail.com">divyanshubhardwajwork@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/divyanshu-bhardwaj-" target="_blank">linkedin.com/in/divyanshu-bhardwaj-</a></p>
-  </section>
+<section id="education" class="section" data-aos="fade-left" data-aos-duration="1000">
+  <div class="container education-box"> <!-- ✨ added class here -->
+    <h2 style="color: #4dd0e1;">Education & Qualifications</h2>
 
-  <footer>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <h3><strong style="color: #5ccf6f;">Qualified – UGC-NET (June & December 2024)</strong></h3>
+        <p style="color: #ffffff;">Qualified the National Eligibility Test in Computer Science & Applications, conducted by NTA – for lectureship and research positions.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3><strong style="color: #5ccf6f;">Master of Computer Applications (MCA)</strong></h3>
+        <p><em style="color: #ffffff;">Atal Bihari Vajpayee Vishwavidyalaya (2022–2024)</em></p>
+        <p style="color: #ffffff;">Graduated with 80%. Specialized in AI, ML, and NLP. Completed real-time projects and internships in machine learning and language technologies.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3><strong style="color: #5ccf6f;">BSc in Computer Science</strong></h3>
+        <p><em style="color: #ffffff;">Govt. E. Raghvendra Rao PG Science College (2019–2022)</em></p>
+        <p style="color: #ffffff;">Studied algorithms, software development, and systems. Actively participated in tech events. Graduated with First Class honors.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3><strong style="color: #5ccf6f;">Higher Secondary Education</strong></h3>
+        <p><em style="color: #ffffff;">St. Xavier's High School (2019)</em></p>
+        <p style="color: #ffffff;">Science stream (PCM). Engaged in early programming and school-level coding competitions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:divyanshubhardwajwork@gmail.com">divyanshubhardwajwork@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/divyanshu-bhardwaj-" target="_blank">linkedin.com/in/divyanshu-bhardwaj-</a></p>
+  <p>GitHub: <a href="https://github.com/Divyanshubhardwaj2002" target="_blank">https://github.com/Divyanshubhardwaj2002</a></p>
+</section>
+
+
+<footer>
     <p>&copy; 2025 Divyanshu Bhardwaj</p>
-  </footer>
+</footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="script.js"></script>
+<!-- AOS Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!-- Your Script -->
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    VANTA.BIRDS({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      backgroundColor: 0x000000, // Pure black
+      color1: 0xff3300,
+      color2: 0xffff00, // Electric blue
+      birdSize: 2.5,
+      quantity: 3,
+      speedLimit: 2.5,
+      separation: 50.0,
+      alignment: 50.0,
+      cohesion: 50.0
+    });
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+<script>
+  VANTA.GLOBE({
+    el: "#experience",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    color: 0xff5500,
+    backgroundColor: 0x000000,
+    size: 1.2
+  });
+</script>
+
+<!-- HALO effect on a section (transparent background) -->
+<!-- Vanta HALO Background Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+<script>
+  VANTA.HALO({
+    el: "#education",
+    mouseControls: true,
+    touchControls: true,
+    baseColor: 0x00ffff,
+    backgroundColor: 0x000000,
+    amplitudeFactor: 1.2,
+    xOffset: 0.25,
+    size: 2.0
+  });
+
+  // Force canvas transparency once loaded
+  const observer = new MutationObserver(() => {
+    const canvas = document.querySelector('#education canvas');
+    if (canvas) {
+      canvas.style.background = 'transparent';
+      canvas.style.zIndex = '-1';
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.getElementById('education'), { childList: true });
+</script>
+
+
+
+
 </body>
 </html>
