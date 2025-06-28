@@ -275,22 +275,5 @@ VANTA.FOG({
   zoom: 1.0
 });
 </script>
-
-
-  // Force canvas transparency once loaded
-  const observer = new MutationObserver(() => {
-    const canvas = document.querySelector('#education canvas');
-    if (canvas) {
-      canvas.style.background = 'transparent';
-      canvas.style.zIndex = '-1';
-      observer.disconnect();
-    }
-  });
-  observer.observe(document.getElementById('education'), { childList: true });
-</script>
-
-
-
-
 </body>
 </html>
