@@ -256,20 +256,26 @@ Qualifying the UGC-NET twice stands as a testament to my academic rigor and deep
 </script>
 
 <!-- HALO effect on a section (transparent background) -->
-<!-- Vanta HALO Background Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+<div id="vanta-bg"></div>
+
 <script>
-  VANTA.HALO({
-    el: "#education",
-    mouseControls: true,
-    touchControls: true,
-    baseColor: 0x00ffff,
-    backgroundColor: 0x000000,
-    amplitudeFactor: 1.2,
-    xOffset: 0.25,
-    size: 2.0
-  });
+VANTA.FOG({
+  el: "#education",
+  mouseControls: true,
+  touchControls: true,
+  highlightColor: 0xff33aa,
+  midtoneColor: 0x111166,
+  lowlightColor: 0x000011,
+  baseColor: 0x000000,
+  blurFactor: 0.3,
+  speed: 1.2,
+  zoom: 1.0
+});
+</script>
+
 
   // Force canvas transparency once loaded
   const observer = new MutationObserver(() => {
