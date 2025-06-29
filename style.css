@@ -152,14 +152,14 @@ body {
   font-size: 1.2em;
   cursor: pointer;
   z-index: 9999;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 body.dark {
-  background: var(--text);
+  background: var(--bg-color);
   color: var(--bc);
 }
 body.dark .section {
-  background: #dd0808;
+  background: #03d68546;
 }
 body.dark .btn {
   background: #02008d;
@@ -297,10 +297,11 @@ section {
   margin: auto;
 }
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif; /* Use a futuristic font */
+  /* margin-bottom: 1em; */
   color: #00fff7;
-  border-bottom: 2px solid #00fff7;
+  /* border-bottom: 2px solid #00fff7; */
   display: inline-block;
 }
 /* Container */
@@ -562,12 +563,49 @@ footer {
   }
 }
 
-/* Medium Devices - Tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .navbar ul {
-    gap: 1.5rem;
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  h1.typewriter {
+    font-size: 1.8rem;
   }
 
+  .btn {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+
+  .hero {
+    height: 60vh;
+    padding: 1em;
+  }
+
+  .skills {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .tag {
+    width: 80px;
+    height: 80px;
+    font-size: 0.7em;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
   h1.typewriter {
     font-size: 2.2rem;
   }
